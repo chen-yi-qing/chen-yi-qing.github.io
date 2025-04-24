@@ -123,10 +123,10 @@ comments:
     issue_term: # < url | pathname | title | ...>
   # Giscus选项 › https://giscus.app
   giscus:
-    repo: # <gh-username>/<repo>
-    repo_id:
-    category:
-    category_id:
+    repo: "chen-yi-qing/chen-yi-qing.github.io" # <gh-username>/<repo>
+    repo_id: "R_kgDOOe4KjA"
+    category: "Announcements"
+    category_id: "DIC_kwDOOe4KjM4CpaXV"
     mapping: # optional, default to 'pathname'
     strict: # optional, default to '0'
     input_position: # optional, default to 'bottom'
