@@ -1,50 +1,54 @@
-# The Site Configuration
+# 网站配置
 
-# Import the theme
+# 指定使用 jekyll-theme-chirpy 作为网站主题。
 theme: jekyll-theme-chirpy
 
-# The language of the webpage › http://www.lingoes.net/en/translator/langcode.htm
-# If it has the same name as one of the files in folder `_data/locales`, the layout language will also be changed,
-# otherwise, the layout language will use the default value of 'en'.
-lang: en
+# 网页的语言 › http://www.lingoes.net/en/translator/langcode.htm
+# 如果它与文件夹 _data/locales 中的某个文件名相同，布局语言也会随之改变，
+# 否则，布局语言将使用默认值 ‘en’。
+# 设置网站的显示语言，参考语言代码（如 en 表示英语）。
+# 如果设置为 _data/locales 文件夹中存在的语言文件（如 zh-CN.yml），界面会切换到对应语言（例如简体中文）。
+# 如果想用中文，需确保 _data/locales/zh-CN.yml 存在（Chirpy 默认包含）。
+# 将 lang 改为 zh-CN（简体中文），让界面显示中文：
+lang: zh-CN
 
-# Change to your timezone › https://kevinnovak.github.io/Time-Zone-Picker
-timezone:
+# 改变你的时区 › https://kevinnovak.github.io/Time-Zone-Picker
+timezone: Asia/Shanghai
 
-# jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
+# jekyll-seo-tag 设置，SEO 插件的配置，用于优化搜索引擎收录。 › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
 # ↓ --------------------------
 
-title: Chirpy # the main title
+title: chen-yi-qing # 网站标题，显示在浏览器标签和 SEO 元数据中。
 
-tagline: A text-focused Jekyll theme # it will display as the subtitle
+tagline: 记录生活与学习 # 副标题，网站的标语，显示在首页或 SEO 描述中。
 
-description: >- # used by seo meta and the atom feed
-  A minimal, responsive and feature-rich Jekyll theme for technical writing.
+description: 一个兴趣使然的个人博客。 # 网站的简要介绍，用于搜索引擎和 RSS 订阅。
 
-# Fill in the protocol & hostname for your site.
+# 填写你的网站协议和主机名
 # E.g. 'https://username.github.io', note that it does not end with a '/'.
 url: ""
 
 github:
-  username: github_username # change to your GitHub username
+  username: chen-yi-qing # GitHub 用户名
 
 twitter:
-  username: twitter_username # change to your Twitter username
+  username: fematqing # Twitter 用户名
 
 social:
-  # Change to your full name.
-  # It will be displayed as the default author of the posts and the copyright owner in the Footer
-  name: your_full_name
-  email: example@domain.com # change to your email address
+  # 更改为您的全名。
+  # 它将作为文章的默认作者和页脚中的版权所有者显示。
+  # social.name 是文章的默认作者，如果文章的 Front Matter 未指定作者，会使用这个名字。
+  name: chen-yi-qing
+  email: fematqing@gmail.com # 更改为您的邮箱地址
   links:
-    # The first element serves as the copyright owner's link
-    - https://twitter.com/username # change to your Twitter homepage
-    - https://github.com/username # change to your GitHub homepage
-    # Uncomment below to add more social links
+    # 第一个元素作为版权所有者的链接
+    # - https://twitter.com/username # 更改为您的Twitter主页
+    - https://github.com/chen-yi-qing # 更改为您的GitHub主页
+    # 取消以下注释以添加更多社交链接
     # - https://www.facebook.com/username
     # - https://www.linkedin.com/in/username
 
-# Site Verification Settings
+# 网站验证设置,搜索引擎和分析工具的验证代码，用于证明你是网站所有者。
 webmaster_verifications:
   google: # fill in your Google verification code
   bing: # fill in your Bing verification code
@@ -54,12 +58,12 @@ webmaster_verifications:
   facebook: # fill in your Facebook verification code
 
 # ↑ --------------------------
-# The end of `jekyll-seo-tag` settings
+# jekyll-seo-tag设置的结束
 
-# Web Analytics Settings
+# 网站分析设置
 analytics:
   google:
-    id: # fill in your Google Analytics ID
+    id: G-HFN1WB7SEW
   goatcounter:
     id: # fill in your GoatCounter ID
   umami:
@@ -73,51 +77,51 @@ analytics:
   fathom:
     id: # fill in your Fathom Site ID
 
-# Page views settings
+# 页面浏览量设置
 pageviews:
-  provider: # now only supports 'goatcounter'
+  provider: # 目前仅支持’goatcounter’，需要在 analytics.goatcounter.id 中配置 GoatCounter ID。
 
-# Prefer color scheme setting.
+# 首选颜色方案设置。
 #
-# Note: Keep empty will follow the system prefer color by default,
-# and there will be a toggle to switch the theme between dark and light
-# on the bottom left of the sidebar.
+# 注意：保持空白将默认遵循系统首选颜色，
+# 并且在侧边栏底部左侧将有一个切换按钮，用于在暗黑和明亮主题之间切换。
+# 主题切换逻辑由 assets/js/ 中的 JavaScript 实现。
+# 亮色/暗色样式定义在 assets/css/ 中。
+
+# 可用选项：
 #
-# Available options:
-#
-#     light — Use the light color scheme
-#     dark — Use the dark color scheme
+#     light — 使用明亮颜色方案
+#     dark — 使用暗黑颜色方案
 #
 theme_mode: # [light | dark]
 
-# The CDN endpoint for media resources.
-# Notice that once it is assigned, the CDN url
-# will be added to all media resources (site avatar, posts' images, audio and video files) paths starting with '/'
+# 媒体资源的CDN端点。
+# 注意一旦分配，CDN网址将添加到所有以’/'开头的媒体资源（网站头像、文章图片、音频和视频文件）路径中
 #
-# e.g. 'https://cdn.com'
+# 例如’https://cdn.com’，示例：如果 cdn: https://cdn.example.com，则 /assets/img/photo.jpg 变为 https://cdn.example.com/assets/img/photo.jpg。
 cdn:
 
-# the avatar on sidebar, support local or CORS resources
+# 侧边栏上的头像，支持本地或CORS资源，指定侧边栏显示的头像图片，支持本地路径（例如 /assets/img/avatar.jpg）或外部 URL（例如 https://example.com/avatar.jpg）。
 avatar:
 
-# The URL of the site-wide social preview image used in SEO `og:image` meta tag.
-# It can be overridden by a customized `page.image` in front matter.
+# 用于SEO og:image元标签的网站范围社交预览图片的URL。
+# 可以被前端事务中的自定义page.image覆盖。
 social_preview_image: # string, local or CORS resources
 
-# boolean type, the global switch for TOC in posts.
+# 布尔类型，文章中TOC的全局开关。
 toc: true
 
 comments:
-  # Global switch for the post-comment system. Keeping it empty means disabled.
-  provider: # [disqus | utterances | giscus]
-  # The provider options are as follows:
+  # 文章评论系统的全局开关。保持空白表示禁用。
+  provider: giscus # [disqus | utterances | giscus]
+  # 提供者的选项如下：
   disqus:
-    shortname: # fill with the Disqus shortname. › https://help.disqus.com/en/articles/1717111-what-s-a-shortname
+    shortname: # 填入Disqus简称。› https://help.disqus.com/en/articles/1717111-what-s-a-shortname
   # utterances settings › https://utteranc.es/
   utterances:
     repo: # <gh-username>/<repo>
     issue_term: # < url | pathname | title | ...>
-  # Giscus options › https://giscus.app
+  # Giscus选项 › https://giscus.app
   giscus:
     repo: # <gh-username>/<repo>
     repo_id:
@@ -129,7 +133,7 @@ comments:
     lang: # optional, default to the value of `site.lang`
     reactions_enabled: # optional, default to the value of `1`
 
-# Self-hosted static assets, optional › https://github.com/cotes2020/chirpy-static-assets
+# 自托管静态资产，可选 › https://github.com/cotes2020/chirpy-static-assets
 assets:
   self_host:
     enabled: # boolean, keep empty means false
@@ -152,7 +156,7 @@ paginate: 10
 # The base URL of your site
 baseurl: ""
 
-# ------------ The following options are not recommended to be modified ------------------
+# ------------ 以下选项不建议修改 ------------------
 
 kramdown:
   footnote_backlink: "&#8617;&#xfe0e;"
